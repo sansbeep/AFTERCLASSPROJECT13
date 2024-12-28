@@ -1,0 +1,86 @@
+<head>
+
+    <title>Hobbies</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+
+    </script>
+
+</head>
+
+
+<body style="text-align:center;">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 style="color:navy">
+                Hobbies
+            </h1>
+        </div>
+    </div>
+</body>
+<p style="text-align:center;">
+    This page was created to keep track of your favourite hobbies! Enter your name and select the hobby you have!
+</p>
+
+<br><br>
+
+</head>
+
+<body>
+    <form id="nameForm">
+        <label for="1name">First Name:</label>
+        <input type="text" id="1name" name="1name" required>
+        <br>
+        <label for="2name">Second Name:</label>
+        <input type="text" id="2name" name="2name" required>
+        <br>
+        <button type="button" onclick="showWelcomeMessage()">Submit</button>
+    </form>
+
+    <p id="welcomeMessage" style="display: none; font-weight: bold;"></p>
+
+    <script>
+        function showWelcomeMessage() {
+            const firstName = document.getElementById("1name").value;
+            const secondName = document.getElementById("2name").value;
+            const welcomeMessage = document.getElementById("welcomeMessage");
+
+            if (firstName && secondName) {
+                welcomeMessage.textContent = `Welcome, ${firstName} ${secondName}.`;
+                welcomeMessage.style.display = "block";
+            } else {
+                alert("Please fill out both fields.");
+            }
+        }
+    </script>
+
+<br><br>
+</body>
+<h2>Hobbies</h2>
+<div class="container mt-3">
+    <button type="button" class="btn btn-primary">Reading</button>
+    
+    <button type="button" class="btn btn-secondary">Gaming</button>
+    
+    <button type="button" class="btn btn-success">Drawing</button>
+    
+    <button type="button" class="btn btn-warning">Sports</button>
+    
+    <button type="button" class="btn btn-danger">Dancing</button>
+</div>
+
+
+
+
+
+
+
+
+
+
